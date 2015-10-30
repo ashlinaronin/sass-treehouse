@@ -2,15 +2,35 @@ body {
   background: #eee;
 }
 
-.blog .entry {
-  h1 {
-    font-size: 20px;
-    color: blue;
-  }
-  p {
-    font-size: 12px;
-  }
-  a {
+/* greater than symbol indicates direct child */
+.blog > h1 {
+  color: red;
+  border: 1px solid red;
+}
+
+.blog {
+  > h1 {
     color: red;
+    border: 1px solid red;
+  }
+  .entry {
+    h1 {
+      font-size: 20px;
+      color: blue;
+    }
+    p {
+      font-size: 12px;
+      margin: 20px;
+      /* '&' takes nested selectors and puts them wherever we want.
+      ** Here we're using it to reverse the order of nesting. */
+      html.csscolumns & {
+        column-count: 2;
+        column-gap: 10px;
+        margin: 10px;
+      }
+    }
+    a {
+      color: red;
+    }
   }
 }
