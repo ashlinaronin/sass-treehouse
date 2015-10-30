@@ -22,6 +22,9 @@ body {
     column-gap: 10px;
     margin: 10px; }
 .blog .entry a {
-  color: red; }
+  color: red;
+  /* Take this selector and add :hover to it */ }
+  .blog .entry a:hover {
+    color: blue; }
 
 /*# sourceMappingURL=main.css.map */
